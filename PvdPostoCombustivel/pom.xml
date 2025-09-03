@@ -7,6 +7,11 @@
     <groupId>br.com</groupId>
     <artifactId>PvdPostoCombustivel</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <modules>
+        <module>DOC</module>
+        <module>DOC/backlog</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>15</maven.compiler.source>
