@@ -1,33 +1,47 @@
 package com.br.pdvpostocombustivel.domain.entity;
 
-import java.util.Date;
+import jakarta.persistence.*;
+import java.time.LocalDate;
 
-public class Pessoa{
+@Entity
+@Table(name = "pessoa")
+public class Pessoa {
 
     // atributos
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(length = 200, nullable = false)
     private String nomeCompleto;
+
+    @Column(length = 14, nullable = false)
     private String cpfCnpj;
-    private Date dataNascimento;
+
+    @Column(length = 10, nullable = false)
+    private LocalDate dataNascimento;
+
+    @Column(length = 12)
     private Long numeroCtps;
 
     // construtor
-    public Pessoa() {
-        super();
+    public Pessoa( ) {
         this.nomeCompleto = nomeCompleto;
         this.cpfCnpj = cpfCnpj;
         this.dataNascimento = dataNascimento;
         this.numeroCtps = numeroCtps;
+        this.id = id;
     }
 
 
     // getters
-    public String getNomeCompleto(){
+    public String getNomeCompleto() {
 
         return nomeCompleto;
     }
 
     // setters
-    public void setNomeCompleto(String nomeCompleto){
+    public void setNomeCompleto(String nomeCompleto) {
 
         this.nomeCompleto = nomeCompleto;
     }
@@ -46,12 +60,12 @@ public class Pessoa{
     }
 
     //getters
-    public Date getDataNascimento() {
+    public LocalDate getDataNascimento() {
         return dataNascimento;
     }
 
     //setters
-    public void setDataNascimento(Date dataNascimento) {
+    public void setDataNascimento(LocalDate dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
 
@@ -63,5 +77,13 @@ public class Pessoa{
     //setters
     public void setNumeroCtps(Long numeroCtps) {
         this.numeroCtps = numeroCtps;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }
