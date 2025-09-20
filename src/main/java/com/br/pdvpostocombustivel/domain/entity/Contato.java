@@ -14,6 +14,10 @@ public class Contato{
         this.endereco = endereco;
     }
 
+    public Contato() {
+        super();
+    }
+
     //getters
     public String getTelefone() {
         return telefone;

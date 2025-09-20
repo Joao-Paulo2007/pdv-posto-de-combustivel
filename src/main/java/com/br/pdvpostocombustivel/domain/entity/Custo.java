@@ -18,6 +18,10 @@ public class Custo{
         this.dataProcessamento = dataProcessamento;
     }
 
+    public Custo() {
+        super();
+    }
+
     public double getImposto() {
         return imposto;
     }

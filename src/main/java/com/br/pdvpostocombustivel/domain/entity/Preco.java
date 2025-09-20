@@ -15,6 +15,10 @@ public class Preco {
         this.horaAlteracao = horaAlteracao;
     }
 
+    public Preco() {
+        super();
+    }
+
     public BigDecimal getValor() {
         return valor;
     }

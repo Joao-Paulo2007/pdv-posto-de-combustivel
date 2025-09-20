@@ -19,6 +19,10 @@ public class Estoque{
         this.dataValidade = dataValidade;
     }
 
+    public Estoque() {
+        super();
+    }
+
     public BigDecimal getQuantidade() {
         return quantidade;
     }
